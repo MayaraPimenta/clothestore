@@ -97,6 +97,15 @@ const products = [
     image: "./images/men-sweater.jpg",
     text: "This jeans works so well. It delightedly improves my football by a lot. SoCal cockroaches are unwelcome, crafty, and tenacious. This jeans keeps them away.",
   },
+
+  {
+    id: 11,
+    title: "Necklace",
+    category: "acessorios",
+    price: "R$ 109,90",
+    image: "./images/accessories-jewel.jpg",
+    text: "This jeans works so well. It delightedly improves my football by a lot. SoCal cockroaches are unwelcome, crafty, and tenacious. This jeans keeps them away.",
+  },
 ];
 const filterBtns = document.querySelectorAll(".btn");
 
@@ -124,16 +133,16 @@ filterBtns.forEach(function (btn) {
 
 function displayItems(products) {
   let displayItem = products.map(function (item) {
-    return `<article class='item'>
-        <img src=${item.image} class='img-thumbnail' alt='item-${item.id}'>
-        <div class='item-info'>
-            <header>
-                <h4>${item.title}</h4>
-                <h4>${item.price}</h4>
-            </header>
-            <p>${item.text}</p>
-        </div>
-    </article>`;
+    return `
+            <article class='item'>
+                <img src=${item.image} class='photo' alt='item-${item.id}'>
+                <div class='item-info'>
+                    <header>
+                        <h4>${item.title}</h4>
+                        <h4>${item.price}</h4>
+                    </header>
+                </div>
+            </article>`;
   });
 
   displayItem = displayItem.join("");
