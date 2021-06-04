@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    title: "Purple Sweater",
+    title: "YELLOW Sweater",
     category: "feminino",
     price: "R$ 150,00",
     image: "./images/women-purple-sweater.jpg",
@@ -10,7 +10,7 @@ const products = [
 
   {
     id: 2,
-    title: "Beige Sweater",
+    title: "STRIPPED Sweater",
     category: "feminino",
     price: "R$ 140,00",
     image: "./images/women-beige-sweater.jpg",
@@ -28,7 +28,7 @@ const products = [
 
   {
     id: 4,
-    title: "Shoe",
+    title: "White Shoe",
     category: "feminino",
     price: "R$ 160,00",
     image: "./images/women-shoe.jpg",
@@ -54,15 +54,6 @@ const products = [
   },
 
   {
-    id: 7,
-    title: "Gloves",
-    category: "acessorios",
-    price: "R$ 50,00",
-    image: "./images/accessories-gloves.jpg",
-    text: "I saw one of these in Vanuatu and I bought one. This brown bag works excessively well. It speedily improves my baseball by a lot. It only works when I'm Rwanda.",
-  },
-
-  {
     id: 8,
     title: "Parfum",
     category: "acessorios",
@@ -82,7 +73,7 @@ const products = [
 
   {
     id: 10,
-    title: "Brown Shoes",
+    title: "grey Shoes",
     category: "masculino",
     price: "R$ 159,00",
     image: "./images/men-shoes.jpg",
@@ -91,7 +82,7 @@ const products = [
 
   {
     id: 11,
-    title: "Grey Sweater",
+    title: "orange Sweater",
     category: "masculino",
     price: "R$ 130,00",
     image: "./images/men-sweater.jpg",
@@ -100,7 +91,7 @@ const products = [
 
   {
     id: 11,
-    title: "Necklace",
+    title: "sunglasses",
     category: "acessorios",
     price: "R$ 109,90",
     image: "./images/accessories-jewel.jpg",
@@ -138,7 +129,7 @@ function displayItems(products) {
                 <img src=${item.image} class='photo' alt='item-${item.id}'>
                 <div class='item-info'>
                     <header>
-                        <h4>${item.title}</h4>
+                        <h4 class="item-name">${item.title.toUpperCase()}</h4>
                         <h4>${item.price}</h4>
                     </header>
                 </div>

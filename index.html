@@ -6,21 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3c891fe7ee.js" crossorigin="anonymous"></script>
     <title>Fashion Store</title>
 </head>
 <body>
-    <section>
+    <section class="main-header">
         <div class="title">
-            <h2>CLOTHE'S STORE</h2>
+            <div></div>
+            <h2 class="main-title">FOREVER 29</h2>
+            <a class="fas fa-question" id="faq" href="/faq.html"></a>
         </div>
-        <div class="btn-container">
-            <button class="btn btn-secondary" data-id="lançamentos">Lançamentos</button>
-            <button class="btn btn-secondary" data-id="feminino">Feminino</button>
-            <button class="btn btn-secondary" data-id="masculino">Masculino</button>
-            <button class="btn btn-secondary" data-id="acessorios">Acessórios</button>
-        </div>
+        <div class="second-header">
+            <div></div>
+            <div class="btn-container">
+            <button class="btn btn-secondary" data-id="lançamentos">LANÇAMENTOS</button>
+            <button class="btn btn-secondary" data-id="feminino">FEMININO</button>
+            <button class="btn btn-secondary" data-id="masculino">MASCULINO</button>
+            <button class="btn btn-secondary" data-id="acessorios">ACESSÓRIOS</button>
+            </div>
+            <a class="fas fa-shopping-cart" id="cart" href="#"></a>
+        </div>       
     </section>
+
     <main class="main-page">
         <!-- <article class="item">
             <img src="/imagens/accessories-parfum.jpg" class="img-thumbnail" alt="perfume">
