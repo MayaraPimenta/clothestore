@@ -1,18 +1,19 @@
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* ------------------------HEADER-------------------------- */
 .main-header {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    box-shadow: 0 4px 4px -4px rgb(209, 209, 209);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  box-shadow: 0 4px 4px -4px rgb(209, 209, 209);
 }
 
 .title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 2rem;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .main-title {
@@ -22,31 +23,15 @@ body {
   font-weight: 600;
 }
 
-a:link { 
-    color: inherit;
-    text-decoration:none; 
-}
-
-#faq {
-    display: flex;
-    padding-top: 1.5rem;
-
-    cursor: pointer;
-}
-
-#faq:hover {
-    color: rgb(71, 71, 71);
-}
-
 .second-header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-container {
   display: flex;
   justify-content: center;
-  
 }
 
 button {
@@ -66,26 +51,55 @@ button:hover {
   background-color: rgb(236, 235, 235);
 }
 
-#cart {
-    padding-top: 0.9rem;
+.icons {
+  display: flex;
+  cursor: pointer;
+}
 
-    cursor: pointer;
+#faq:hover {
+  color: gray;
 }
 
 #cart:hover {
-    color: rgb(71, 71, 71);
+  color: gray;
 }
 
+#cart {
+  padding-right: 0.6rem;
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+/* ------------------------MAIN PAGE-------------------------- */
 .main-page {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-right: 20rem;
-    margin-left: 20rem;
-  }
+  /* height: 100%;
+  width: 75rem; */
+
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap;
+  margin: 0 20rem auto 20rem; */
+}
+
+.container-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  max-width: 1104px;
+}
 
 .item {
-  padding-left: 5rem;
-  padding-top: 3rem;
+  padding: 2rem 1.5rem 0rem 1.5rem;
 }
 
 .photo {
@@ -102,5 +116,33 @@ header {
 }
 
 .item-name {
-    font-weight: 200;
+  font-weight: 200;
 }
+
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  button {
+    font-size: 0.5rem;
+  }
+} */
+
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .main-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 12rem;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .main-page {
+    height: 100%;
+    width: 45rem;
+
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+} */
