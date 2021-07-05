@@ -100,6 +100,8 @@ const products = [
 ];
 const filterBtns = document.querySelectorAll('.btn');
 
+
+
 window.addEventListener('DOMContentLoaded', function () {
   displayItems(products);
 });
@@ -141,3 +143,4 @@ function displayItems(products) {
   let mainDisplay = document.querySelector('.container-main');
   mainDisplay.innerHTML = displayItem;
 }
+
