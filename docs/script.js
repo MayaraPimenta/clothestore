@@ -99,7 +99,8 @@ const products = [
   },
 ];
 const filterBtns = document.querySelectorAll('.btn');
-
+const modal = document.querySelector('.modal-overlay');
+const closeBtn = document.querySelector('.close-modal');
 
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -144,3 +145,14 @@ function displayItems(products) {
   mainDisplay.innerHTML = displayItem;
 }
 
+document.body.addEventListener('click', (e) => {
+    if (e.target && e.target.classList.contains('photo')) {
+      modal.classList.add('show-modal')
+    }
+  })
+
+document.body.addEventListener('click', (e) => {
+  if (e.target && e.target.classList.contains('close-modal')) {
+    modal.classList.remove('show-modal')
+  }
+})
