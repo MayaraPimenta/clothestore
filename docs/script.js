@@ -90,7 +90,7 @@ const products = [
   },
 
   {
-    id: 11,
+    id: 12,
     title: 'sunglasses',
     category: 'acessorios',
     price: 'R$ 109,90',
@@ -128,7 +128,7 @@ filterBtns.forEach(function (btn) {
 function displayItems(products) {
   let displayItem = products.map(function (item) {
     return `
-            <article class='item'>
+            <article class='item' id=${item.id}>
                 <img src=${item.image} class='photo' alt='item-${item.id}'>
                 <div class='item-info'>
                     <header>
@@ -148,7 +148,18 @@ function displayItems(products) {
 document.body.addEventListener('click', (e) => {
     if (e.target && e.target.classList.contains('photo')) {
       modal.classList.add('show-modal')
-    }
+      let imgClickedId = e.target.parentElement.id
+      let productFound = products.find(element => element.id == imgClickedId)
+      modal.innerHTML = `<div class="modal-container">
+        <img src=${productFound.image} class="modal-img" alt=${productFound.id}/>               
+        <div class="modal-text">
+        <h2 class="modal-title">${productFound.title.toUpperCase()}</h2>
+        <h4 class="modal-price">${productFound.price}</h4>
+        <h4 class="modal-desc">${productFound.text}</h4>
+  </div>
+    <button class="close-modal fas fa-times"></button>`
+        
+      }
   })
 
 document.body.addEventListener('click', (e) => {
